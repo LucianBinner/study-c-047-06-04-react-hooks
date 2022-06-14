@@ -1,16 +1,11 @@
-import { useEffect } from 'react';
-import { useCounterContext } from '../../contexts/CounterContext';
+import Button from '../../components/Button';
+import Heading from '../../components/Heading';
 
 const Home = () => {
-  const { state, actions } = useCounterContext();
-
-  useEffect(() => {
-    actions.increase();
-  }, [actions]);
-
   return (
     <div>
-      <h1 onClick={() => actions.increase()}>Ola</h1>
+      <Heading />
+      <Button nameAction={'increase'} nameButton={'Increase'} />
     </div>
   );
 };
